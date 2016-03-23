@@ -1,0 +1,25 @@
+﻿<Window x:Class="proxyClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proxyClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="410" Width="673">
+    <Grid>
+        <Button x:Name="button" Content="POST" HorizontalAlignment="Center" Margin="294,0,296,0" VerticalAlignment="Bottom" Width="75" Click="button_Click"/>
+        <Grid Margin="10,5,274,287">
+            <TextBox x:Name="proxyAddress" HorizontalAlignment="Left" Height="23" Margin="55,4,0,0" TextWrapping="Wrap" Text="127.0.0.1" VerticalAlignment="Top" Width="120" ToolTip="Proxy server address"/>
+            <TextBox x:Name="proxyPort" HorizontalAlignment="Left" Height="23" Margin="191,4,0,0" TextWrapping="Wrap" Text="1080" VerticalAlignment="Top" Width="38" ToolTip="Proxy server port"/>
+            <Label x:Name="label" Content="Proxy:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label x:Name="label_Copy" Content="Host:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,38,0,0" RenderTransformOrigin="0.297,0.769"/>
+            <TextBox x:Name="hostAddress" HorizontalAlignment="Left" Height="23" Margin="55,41,0,0" TextWrapping="Wrap" Text="httpbin.org" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="hostPort" HorizontalAlignment="Left" Height="23" Margin="191,41,0,0" TextWrapping="Wrap" Text="80" VerticalAlignment="Top" Width="38" ToolTip="Proxy server port"/>
+        </Grid>
+        <TextBox x:Name="postText" HorizontalAlignment="Left" Margin="10,92,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Height="252" Width="316" Background="Gainsboro" Text="POST /post HTTP/1.0&#xD;&#xA;Host: httpbin.org&#xD;&#xA;Accept: */*&#xD;&#xA;User-Agent: poster&#xD;&#xA;Content-Length: 6&#xD;&#xA;&#xD;&#xA;try on"/>
+        <TextBox x:Name="proxyUser" HorizontalAlignment="Left" Height="23" Margin="326,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="97"/>
+        <TextBox x:Name="proxyPass" HorizontalAlignment="Left" Height="23" Margin="437,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
+        <Label x:Name="label1" Content="User and Pass" HorizontalAlignment="Left" Margin="243,6,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="replyText" HorizontalAlignment="Left" Margin="331,92,0,0" TextWrapping="Wrap" AcceptsReturn="True" VerticalAlignment="Top" Height="252" Width="324" Background="Gainsboro"/>
+    </Grid>
+</Window>
